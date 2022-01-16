@@ -59,10 +59,10 @@ void findRowSum(const double *a,double *b,int N,int M){
 }
 
 void  findColSum(const double *a,double *b,int N,int M){
-	for(int i =0;i < M;i++){
-		b[i]=0;
-		for(int j = 0;j < N;j++){
-			b[i] += *(a+(j*M)+i);
+	for(int j = 0;j < M;j++){
+		b[j]=0;
+		for(int i =0;i < N;i++){
+			b[j] += *(a+j+(i*M));
 		}
 	}
 }
